@@ -20,7 +20,7 @@ Calculator App with actions' history on reactJS, mongodb (mongoose), express, no
 5. После завершения проект должен быть доступен по (если указанные порты не были заняты):
 * **Клиент**: `http://localhost:8090/`
 * **Сервер**: `http://localhost:8080/` 
-*(например, можно проверить рест запросом http://localhost:8080/)*
+*(например, можно проверить рест запросом http://localhost:8080/calc-actions)*
 
 ### Архитектура проекта
 * Клиентаская часть в папке client/ на основе flux-архитектуры. Entrypoint (`client/calc.js`) - и сам запуск клиентской части -
