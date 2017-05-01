@@ -14,7 +14,7 @@ Calculator App with actions' history on reactJS, mongodb (mongoose), express, no
 ### Запуск проекта c помощью Docker-compose
 
 1. Необходимо установить docker (engine - ver. >16.0). Позволить запускать docker без `sudo`
-2. Установить docker-compose (ver. ^1.11.)
+2. Установить docker-compose (ver. >1.11.)
 3. Склонировать и зайти в **root dir проекта**.
 4. Выполнить в консоли: `docker-compose up --build`
 5. После завершения проект должен быть доступен по (если указанные порты не были заняты):
