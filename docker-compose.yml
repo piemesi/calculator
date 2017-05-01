@@ -1,0 +1,35 @@
+version: "2.1"
+
+services:
+  webserver:
+      build: .
+      container_name: webserver
+      ports:
+       - "8080:8080"
+      volumes :
+       - ./:/app
+      links:
+          - mongo
+
+  web:
+      build:
+        context: .
+        dockerfile: DockerfileClient
+      ports:
+       - "8090:8090"
+      volumes :
+       - ./:/app
+      links:
+          - webserver
+          - mongo
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    container_name: mongo
+    volumes:
+     - /data/mongodb/db:/data/db
+
+
+
+

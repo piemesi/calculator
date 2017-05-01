@@ -10,3 +10,27 @@ Calculator App with actions' history on reactJS, mongodb (mongoose), express, no
 5. `npm run server`
 6. `npm run webpack-devserver`
 7. Приложение должно стать доступным по http://localhost:8090 в браузере
+
+### Запуск проекта c помощью Docker-compose
+
+1. Необходимо установить docker (engine - ver. >16.0). Позволить запускать docker без `sudo`
+2. Установить docker-compose (ver. ^1.11.)
+3. Склонировать и зайти в **root dir проекта**.
+4. Выполнить в консоли: `docker-compose up --build`
+5. После завершения проект должен быть доступен по (если указанные порты не были заняты):
+* **Клиент**: `http://localhost:8090/`
+* **Сервер**: `http://localhost:8080/` 
+*(например, можно проверить рест запросом http://localhost:8080/)*
+
+### Архитектура проекта
+* Клиентаская часть в папке client/ на основе flux-архитектуры. Entrypoint (`client/calc.js`) - и сам запуск клиентской части -
+через webpack: `npm run webpack-devserver`
+* Серверная часть располагается в папке server. Взаимодействие с бд MongoDB через утилиту mongoose. Используется модель - models/Action.js
+Сам запуск сервера - app.js (поскольку ES6-> запуск выполнять через `babel-node server/app.js`). Но лучше через `npm run webpack-devserver`. А еще лучше - с помощью `docker-compose up --build`
+
+
+
+
+
+
+
