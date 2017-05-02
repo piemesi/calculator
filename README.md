@@ -16,10 +16,10 @@ Calculator App with actions' history on reactJS, mongodb (mongoose), express, no
 1. Необходимо установить docker (engine - ver. >16.0). Позволить запускать docker без `sudo`
 2. Установить docker-compose (ver. >1.11.)
 3. Склонировать repo
-4. Желательно, установить права на папку проекта: `chmod 777 -R {APP_FOLDER}`, где {APP_FOLDER} - папка проекта. 
+4. (необязательно) Желательно, установить права на папку проекта: `chmod 777 -R {APP_FOLDER}`, где {APP_FOLDER} - папка проекта. 
 5. Зайти в **root dir проекта** {APP_FOLDER}.
 6. Выполнить в консоли: `docker-compose up --build`
-**6.a. При некоторых настройках, возможно "permission denied" при `npm run _somescript_` - контейнеры не запустяться. Можно сделать еще раз `chmod 777 -R {APP_FOLDER}` и повторить пункт 6.
+6.a. *(необязательно)При некоторых настройках, возможно "permission denied" при `npm run _somescript_` - контейнеры не запустяться. Можно сделать еще раз `chmod 777 -R {APP_FOLDER}` и повторить пункт 6.*
 7. После завершения проект должен быть доступен по (если указанные порты не были заняты):
 * **Клиент**: `http://localhost:8090/`
 * **Сервер**: `http://localhost:8080/` 
